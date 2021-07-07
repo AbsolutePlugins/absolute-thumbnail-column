@@ -1,5 +1,5 @@
 === Absolute Thumbnail Column ===
-Contributors: absoluteplugins, mhamudul_hk
+Contributors: absoluteplugins, niamul, mhamudul_hk
 Tags: image, thumbnail, featured image, image
 Requires at least: 4.8
 Tested up to: 5.7.2
@@ -32,7 +32,7 @@ With **Absolute Thumbnail Column** you can upload, select or change post thumbna
 Automatic installation is the easiest option -- WordPress will handles the file transfer, and you won’t need to leave your web browser.
 1. Log in to your WordPress dashboard
 2. Navigate to the Plugins menu, and click “Add New.”
-3. In the search field type “WooCommerce,” then click “Search Plugins.” Once you’ve found us,  you can view details about it such as the point release, rating, and description. Most importantly of course, you can install it by! Click “Install Now,” and WordPress will take it from there.
+3. In the search field type “Absolute Thumbnail Column,” then click “Search Plugins.” Once you’ve found us,  you can view details about it such as the point release, rating, and description. Most importantly of course, you can install it by! Click “Install Now,” and WordPress will take it from there.
 
 = Manual installation =
 
@@ -43,7 +43,7 @@ Automatic installation is the easiest option -- WordPress will handles the file 
 The WordPress codex contains more [instructions on how to do this here](https://wordpress.org/support/article/managing-plugins/#:~:text=Manual%20Plugin%20Installation,-%23).
 
 == Upgrade Notice ==
-
+Automatic updates should work smoothly, but we still recommend you back up your site.
 
 == Frequently Asked Questions ==
 
@@ -89,7 +89,6 @@ function add_your_post_type_thumbnail_column_support( $supports, $post_type ) {
 	return $supports;
 }
 ```
-
 
 == Screenshots ==
 
