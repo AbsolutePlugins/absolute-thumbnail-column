@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-07-06T19:57:56+00:00\n"
+"POT-Creation-Date: 2021-07-07T14:49:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: absp-thumbnail-column\n"
@@ -34,33 +34,33 @@ msgstr ""
 msgid "https://absoluteplugins.com/"
 msgstr ""
 
-#: absolute-thumbnail-column.php:103
+#: absolute-thumbnail-column.php:112
 msgid "Thumbnail"
 msgstr ""
 
-#: absolute-thumbnail-column.php:167
-#: absolute-thumbnail-column.php:169
+#: absolute-thumbnail-column.php:175
+#: absolute-thumbnail-column.php:177
 msgid "Click the image to edit or update"
 msgstr ""
 
-#: absolute-thumbnail-column.php:171
-#: absolute-thumbnail-column.php:173
+#: absolute-thumbnail-column.php:179
+#: absolute-thumbnail-column.php:181
 msgid "Remove featured image"
 msgstr ""
 
-#: absolute-thumbnail-column.php:181
+#: absolute-thumbnail-column.php:189
 msgid "No Thumb"
 msgstr ""
 
-#: absolute-thumbnail-column.php:189
-#: absolute-thumbnail-column.php:191
+#: absolute-thumbnail-column.php:197
+#: absolute-thumbnail-column.php:199
 msgid "Set featured image"
 msgstr ""
 
-#: absolute-thumbnail-column.php:352
+#: absolute-thumbnail-column.php:360
 msgid "Could not set that as the thumbnail image. Try a different attachment."
 msgstr ""
 
-#: absolute-thumbnail-column.php:354
+#: absolute-thumbnail-column.php:362
 msgid "Could not remove the post thumbnail image. Try a again later."
 msgstr ""
