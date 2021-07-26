@@ -16,14 +16,14 @@ Absolute Thumbnail column allows you to upload, select and change thumbnail on a
 4. Uses the native WordPress media popup.
 
 ## Documentation & FAQ
-* [Absolute Thumbnail Column Documentation](https://go.absoluteplugins.com/docs/absolute-thumbnail-column)
-* [Absolute Thumbnail Column FAQ](https://go.absoluteplugins.com/faq/absolute-thumbnail-column)
+* [Absolute Thumbnail Column Documentation](https://go.absoluteplugins.com/goto/docs/absolute-thumbnail-column)
+* [Absolute Thumbnail Column FAQ](https://go.absoluteplugins.com/goto/faq/absolute-thumbnail-column)
 
 ## Support
 This repository is not suitable for support.
 Please don't use our issue tracker for support requests,
 but for core Absolute Thumbnail Column issues only.
-For any support please open a [support ticket](https://go.absoluteplugins.com/support/absolute-thumbnail-column).
+For any support please open a [support ticket](https://go.absoluteplugins.com/goto/support/absolute-thumbnail-column).
 
 [comment]: <> (Support requests in issues on this repository will be closed on sight.)
 
