@@ -1,4 +1,4 @@
-#Absolute Thumbnail Column
+# Absolute Thumbnail Column
 
 [![WordPress](https://img.shields.io/wordpress/v/absolute-thumbnail-column.svg?label=WordPress&style=flat-square)](https://wordpress.org/plugins/absolute-thumbnail-column/)
 [![Absolute Thumbnail Column Rating](https://img.shields.io/wordpress/plugin/r/absolute-thumbnail-column?label=Rating&style=flat-square)](https://wordpress.org/plugins/absolute-thumbnail-column/)
