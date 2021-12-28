@@ -1,12 +1,19 @@
-<h1 style="text-align: center">Absolute Thumbnail Column</h1>
+#Absolute Thumbnail Column
 
-<br>
+[![WordPress](https://img.shields.io/wordpress/v/absolute-thumbnail-column.svg?label=WordPress&style=flat-square)](https://wordpress.org/plugins/absolute-thumbnail-column/)
+[![Absolute Thumbnail Column Rating](https://img.shields.io/wordpress/plugin/r/absolute-thumbnail-column?label=Rating&style=flat-square)](https://wordpress.org/plugins/absolute-thumbnail-column/)
+[![Absolute Thumbnail Column Version](https://img.shields.io/wordpress/plugin/v/absolute-thumbnail-column.svg?label=Version&style=flat-square)](https://wordpress.org/plugins/absolute-thumbnail-column/)
+[![Absolute Thumbnail Column Downloads](https://img.shields.io/wordpress/plugin/dt/absolute-thumbnail-column?label=Downloads&style=flat-square)](https://wordpress.org/plugins/absolute-thumbnail-column/)
 
 Welcome to the **Absolute Thumbnail Column** repository on GitHub.
 Here you can browse the source, look at open issues and keep track of development and report any bug you found.
 You can also use the GitHub issue tracker to ask for new features.
 
 Absolute Thumbnail column allows you to upload, select and change thumbnail on any post-types right from the post table.
+
+## Download
+
+If you are not a developer, please download [Absolute Thumbnail Column](https://wordpress.org/plugins/absolute-thumbnail-column/) from WordPress.org.
 
 ## Features
 
