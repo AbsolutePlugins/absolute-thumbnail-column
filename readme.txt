@@ -100,6 +100,7 @@ function add_your_post_type_thumbnail_column_support( $supports, $post_type ) {
 == Changelog ==
 
 = 1.0.1 – 2022-02-17 =
+* Fixed WooCommerce product list thumbnail column width.
 * Tested with the latest WordPress & WooCommerce available
 
 = 1.0.0 =
