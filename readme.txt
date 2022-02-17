@@ -4,7 +4,7 @@ Tags: image, thumbnail, featured image, image
 Requires at least: 4.8
 Tested up to: 5.7.2
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -98,6 +98,9 @@ function add_your_post_type_thumbnail_column_support( $supports, $post_type ) {
 5. Supports WooCommerce Too
 
 == Changelog ==
+
+= 1.0.1 – 2022-02-17 =
+* Tested with the latest WordPress & WooCommerce available
 
 = 1.0.0 =
 * Initial release.

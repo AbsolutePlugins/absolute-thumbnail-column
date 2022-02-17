@@ -9,19 +9,21 @@
  * Domain Path: /languages
  * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Version: 1.0.0
+ * Version: 1.0.1
  *
  * [PHP]
  * Requires PHP: 5.6
+ *
  * [WP]
  * Requires at least: 4.8
- * Tested up to: 5.7.2
+ * Tested up to: 5.9
+ *
  * [WC]
  * WC requires at least: 4.5
- * WC tested up to: 5.4.1
+ * WC tested up to: 6.2
  *
  * @package ABSP_ThumbnailColumn
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 /**
