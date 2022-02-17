@@ -245,6 +245,7 @@ function absp_thumbnail_column_styles() {
 			display: none !important;
 			visibility: hidden !important;
 		}
+		.wp-admin.woocommerce-page table.wp-list-table tr.type-product td.thumb .absp-thumbs-wrapper img,
 		.absp-thumbs-wrapper img {
 			width: 100% !important;
 			max-width: 100% !important;
