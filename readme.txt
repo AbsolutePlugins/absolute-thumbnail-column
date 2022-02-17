@@ -2,7 +2,7 @@
 Contributors: absoluteplugins, niamul, mhamudul_hk
 Tags: image, thumbnail, featured image, image
 Requires at least: 4.8
-Tested up to: 5.7.2
+Tested up to: 5.9
 Requires PHP: 5.6
 Stable tag: 1.0.1
 License: GPLv3 or later
