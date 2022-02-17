@@ -8,6 +8,8 @@
 .git
 .gitignore
 .github
+.husky
+.gitattributes
 .gitlab-ci.yml
 .travis.yml
 .DS_Store
