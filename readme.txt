@@ -76,9 +76,9 @@ Please make sure your post type is registered with `init` or any earlier hook wi
 If the priority is too low (Eg. 9999) this plugin might not able to detect it.
 You can also use the following 2 filters to add support for your post-type `absp_post_type_supports_thumbnail` && `absp_current_post_type_supports_thumbnail`.
 It's require that you use both of these to make your post-type get recognized by the plugin.
-Eg.
-```php
-add_filter( 'absp_post_type_supports_thumbnail', 'add_your_post_type_thumbnail_column_support', 10, 2 );
+
+E.g.
+`add_filter( 'absp_post_type_supports_thumbnail', 'add_your_post_type_thumbnail_column_support', 10, 2 );
 add_filter( 'absp_current_post_type_supports_thumbnail', 'add_your_post_type_thumbnail_column_support', 10, 2 );
 
 function add_your_post_type_thumbnail_column_support( $supports, $post_type ) {
@@ -87,8 +87,7 @@ function add_your_post_type_thumbnail_column_support( $supports, $post_type ) {
 	}
 
 	return $supports;
-}
-```
+}`
 
 == Screenshots ==
 
