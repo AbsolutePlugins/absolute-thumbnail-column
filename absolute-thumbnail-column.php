@@ -223,10 +223,14 @@ function absp_thumbnail_column_styles() {
 	<style>
 		.absp-thumbs-wrapper {
 			position: relative;
-			display: block;
-			width: 70px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 120px;
 			height: auto;
-			min-height: 50px;
+			padding: 10px;
+			border: 1px solid #c3c4c7;
+			background: #f0f0f1;
 			margin: 0;
 			line-height: 0;
 			box-sizing: border-box;
@@ -245,14 +249,9 @@ function absp_thumbnail_column_styles() {
 		}
 		.wp-admin.woocommerce-page table.wp-list-table tr.type-product td.thumb .absp-thumbs-wrapper img,
 		.absp-thumbs-wrapper img {
-			width: 100% !important;
-			max-width: 100% !important;
-			height: auto !important;
-			min-height: 50px;
-			max-height: 100% !important;
-			border: 2px solid #c3c4c7;
-			padding: 2px;
-			margin: 0 !important;
+			width: 100%;
+			height: auto;
+			margin: 0 ;
 			overflow: hidden;
 		}
 		.absp-thumbs-wrapper .spinner {
