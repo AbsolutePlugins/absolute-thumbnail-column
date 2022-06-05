@@ -226,7 +226,7 @@ function absp_thumbnail_column_styles() {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 120px;
+			width: 70px;
 			height: auto;
 			padding: 10px;
 			border: 1px solid #c3c4c7;
