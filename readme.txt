@@ -49,11 +49,11 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 
 = Does this support all post types? =
 
-Yes and No. This support all of the post type that supports post thumbnail feature.
+Yes and No. This support all the post type that supports post thumbnail feature.
 
 = Does it work with any WordPress theme? =
 
-This plugin does it's things only in admin dashboard, and has nothing to do with themes.
+This plugin does its things only in admin dashboard, and has nothing to do with themes.
 
 = And WooCommerce? =
 
@@ -67,7 +67,7 @@ However you can delete the image from the media popup as usual.
 
 = Thumbnail Column Not Showing! =
 
-Please check the **Screen Options** located on the top right corner on the screen and make sure `Thumbnail` checkbox is checked.
+Please check the **Screen Options** located in the top right corner on the screen and make sure `Thumbnail` checkbox is checked.
 If not please click the checkbox and this apply to apply the changes.
 
 = I'm a developer & My Post type has thumbnail support but the column not showing up!! =
@@ -99,8 +99,13 @@ function add_your_post_type_thumbnail_column_support( $supports, $post_type ) {
 
 == Changelog ==
 
+= 1.0.2 – 2022-06-05 =
+* **Fixed** Spinner animation doesn't stop if same image chosen as replacement.
+* **Improvement** Adds prompt for user confirmation before removing/replacing thumbnail.
+* **Updated** Tested upto WordPress 6.0 & WooCommerce 6.5
+
 = 1.0.1 – 2022-02-17 =
-* Fixed WooCommerce product list thumbnail column width.
+* **Fixed** WooCommerce product list thumbnail column width.
 * Tested with the latest WordPress & WooCommerce available
 
 = 1.0.0 =

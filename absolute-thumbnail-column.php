@@ -9,21 +9,21 @@
  * Domain Path: /languages
  * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Version: 1.0.1
+ * Version: 1.0.2
  *
  * [PHP]
  * Requires PHP: 5.6
  *
  * [WP]
  * Requires at least: 4.8
- * Tested up to: 5.9
+ * Tested up to: 6.0
  *
  * [WC]
  * WC requires at least: 4.5
- * WC tested up to: 6.2
+ * WC tested up to: 6.5
  *
  * @package ABSP_ThumbnailColumn
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 /**
@@ -58,7 +58,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Initialize.
- * Init Textdomain & List table columns.
  *
  * @return void
  */
@@ -170,9 +169,9 @@ function generate_absp_thumbnail( $id, $echo = true ) {
 			echo get_the_post_thumbnail( $id, 'thumbnail', [ 'alt' => get_the_title( $id ) ] );
 			?>
 			<div class="thumb-handler hide-if-no-js"
-				 data-id="<?php echo esc_attr( $id ); ?>"
-				 data-featured-image-id="<?php echo esc_attr( $thumb_id ); ?>"
-				 data-nonce="<?php echo esc_attr( wp_create_nonce( 'update-post_' . $id ) ); ?>"
+			     data-id="<?php echo esc_attr( $id ); ?>"
+			     data-featured-image-id="<?php echo esc_attr( $thumb_id ); ?>"
+			     data-nonce="<?php echo esc_attr( wp_create_nonce( 'update-post_' . $id ) ); ?>"
 			>
 				<a href="#" class="set-post-thumbnail" title="<?php esc_attr_e( 'Click the image to edit or update', 'absp-thumbnail-column' ); ?>">
 					<span class="dashicons dashicons-controls-repeat" aria-hidden="true"></span>
@@ -192,9 +191,9 @@ function generate_absp_thumbnail( $id, $echo = true ) {
 			);
 			?>
 			<div class="thumb-handler hide-if-no-js"
-				 data-id="<?php echo esc_attr( $id ); ?>"
-				 data-featured-image-id="<?php echo esc_attr( $thumb_id ); ?>"
-				 data-nonce="<?php echo esc_attr( wp_create_nonce( 'update-post_' . $id ) ); ?>"
+			     data-id="<?php echo esc_attr( $id ); ?>"
+			     data-featured-image-id="<?php echo esc_attr( $thumb_id ); ?>"
+			     data-nonce="<?php echo esc_attr( wp_create_nonce( 'update-post_' . $id ) ); ?>"
 			>
 				<a href="#" class="set-post-thumbnail" title="<?php esc_attr_e( 'Set featured image', 'absp-thumbnail-column' ); ?>">
 					<span class="dashicons dashicons-plus" aria-hidden="true"></span>
@@ -229,7 +228,6 @@ function absp_thumbnail_column_styles() {
 			height: auto;
 			min-height: 50px;
 			margin: 0;
-			box-sizing: border-box;
 			line-height: 0;
 			box-sizing: border-box;
 		}
@@ -346,6 +344,10 @@ function absp_thumbnail_column_scripts() {
 					set: function( id ) {
 						var settings = wp.media.view.settings,
 							wrapper = $('#absp-thumb-' + settings.post.id );
+						// During image replacement if previous image is selected again then return.
+						if ( settings.post.featuredImageId > 0 && settings.post.featuredImageId === id ) {
+							return;
+						}
 
 						// Set the thumb id.
 						settings.post.featuredImageId = id;
@@ -374,7 +376,9 @@ function absp_thumbnail_column_scripts() {
 					 * set the HTML in the post meta box to no featured image.
 					 */
 					remove: function() {
-						featuredImage.set( -1 );
+						if( confirm( '<?php esc_html_e( 'Are you sure, you want to remove the image?', 'absp-thumbnail-column' ); ?>' ) ) {
+							featuredImage.set( -1 );
+						}
 					},
 					/**
 					 * The Featured Image workflow
@@ -426,7 +430,6 @@ function absp_thumbnail_column_scripts() {
 					 */
 					select: function() {
 						var selection = this.get('selection').single();
-						console.log( selection );
 
 						if ( ! wp.media.view.settings.post.featuredImageId ) {
 							return;
@@ -447,6 +450,13 @@ function absp_thumbnail_column_scripts() {
 								// Stop propagation to prevent thickbox from activating.
 								event.stopPropagation();
 								featuredImage.set_data( this );
+								// If current image is not placeholder image.
+								if ( wp.media.view.settings.post.featuredImageId > 0 ) {
+									if ( ! confirm( '<?php esc_html_e( 'Are you sure, You want to replace this image?', 'absp-thumbnail-column' ) ?>' ) ) {
+										return;
+									}
+								}
+
 								featuredImage.frame().open();
 							})
 							.on( 'click', '.remove-post-thumbnail', function() {
@@ -465,6 +475,9 @@ function absp_thumbnail_column_scripts() {
 
 /**
  * Ajax request/response handler for set/remove thumbnail request.
+ *
+ * @see wp_ajax_get_post_thumbnail_html()
+ *
  */
 function absp_thumbnail_column_ajax_set_post_thumbnail() {
 	$post_ID = (int) $_POST['post_id'];
@@ -482,13 +495,9 @@ function absp_thumbnail_column_ajax_set_post_thumbnail() {
 		$thumbnail_id = null;
 	}
 
-	// Keep the wp back compact above. if no thumb then return the place holder. and use it to remove the thumb.
+	// Keep the wp back compact above. if no thumb then return the placeholder. and use it to remove the thumb.
 	if ( $thumbnail_id ) {
-		if (
-			! set_post_thumbnail( $post_ID, $thumbnail_id )
-			||
-			! has_post_thumbnail( $post_ID )
-		) {
+		if ( ! set_post_thumbnail( $post_ID, $thumbnail_id ) || ! has_post_thumbnail( $post_ID ) ) {
 			wp_die( -1 );
 		}
 	} else {
@@ -500,8 +509,10 @@ function absp_thumbnail_column_ajax_set_post_thumbnail() {
 	wp_send_json_success( generate_absp_thumbnail( $post_ID, false ) );
 }
 
-// hook things upl
+// Hook things up.
 add_action( 'wp_ajax_absp_thumbnail_column_ajax_add', 'absp_thumbnail_column_ajax_set_post_thumbnail' );
+
 // Fire it up (make sure all post types are already registered).
 add_action( 'init', 'absp_thumbnail_column_init', 9999 );
+
 // End of file absolute-thumbnail-column.php.
