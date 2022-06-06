@@ -99,7 +99,7 @@ function add_your_post_type_thumbnail_column_support( $supports, $post_type ) {
 
 == Changelog ==
 
-= 1.0.2 – 2022-06-05 =
+= 1.0.2 – 2022-06-06 =
 * **Fixed** Spinner animation doesn't stop if same image chosen as replacement.
 * **Improvement** Adds prompt for user confirmation before removing/replacing thumbnail.
 * **Updated** Tested upto WordPress 6.0 & WooCommerce 6.5
